@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/kajalshukla521/TodoApp-in-React-js-/static/css/main.e6c13ad2.css",
-    "main.js": "/kajalshukla521/TodoApp-in-React-js-/static/js/main.e7f7fc64.js",
-    "static/js/453.81f383cb.chunk.js": "/kajalshukla521/TodoApp-in-React-js-/static/js/453.81f383cb.chunk.js",
-    "index.html": "/kajalshukla521/TodoApp-in-React-js-/index.html",
-    "main.e6c13ad2.css.map": "/kajalshukla521/TodoApp-in-React-js-/static/css/main.e6c13ad2.css.map",
-    "main.e7f7fc64.js.map": "/kajalshukla521/TodoApp-in-React-js-/static/js/main.e7f7fc64.js.map",
-    "453.81f383cb.chunk.js.map": "/kajalshukla521/TodoApp-in-React-js-/static/js/453.81f383cb.chunk.js.map"
+    "main.css": "/TodoApp-in-React-js/static/css/main.e6c13ad2.css",
+    "main.js": "/TodoApp-in-React-js/static/js/main.ce4b4605.js",
+    "static/js/453.81f383cb.chunk.js": "/TodoApp-in-React-js/static/js/453.81f383cb.chunk.js",
+    "index.html": "/TodoApp-in-React-js/index.html",
+    "main.e6c13ad2.css.map": "/TodoApp-in-React-js/static/css/main.e6c13ad2.css.map",
+    "main.ce4b4605.js.map": "/TodoApp-in-React-js/static/js/main.ce4b4605.js.map",
+    "453.81f383cb.chunk.js.map": "/TodoApp-in-React-js/static/js/453.81f383cb.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.e6c13ad2.css",
-    "static/js/main.e7f7fc64.js"
+    "static/js/main.ce4b4605.js"
   ]
 }
