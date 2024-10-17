@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
 import TodoInput from "./TodoInput";
@@ -22,37 +21,38 @@ const Title = styled.h1`
 
 const InputAndFilterContainer = styled.div`
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  flex-direction: column; /* Stack input and filter vertically */
+  align-items: center; /* Center align them */
   width: 100%;
   max-width: 600px;
   margin-bottom: 20px;
+
+  @media (min-width: 768px) {
+    flex-direction: row; /* On larger screens, arrange them in a row */
+    justify-content: space-between;
+  }
 `;
 
 const Todo = () => {
   const [tasks, setTasks] = useState(() => {
-    // Load tasks from local storage on initial render
     const storedTasks = localStorage.getItem('tasks');
     return storedTasks ? JSON.parse(storedTasks) : [];
   });
   const [searchQuery, setSearchQuery] = useState('');
 
-  // Use effect to save tasks to local storage whenever they change
   useEffect(() => {
     localStorage.setItem('tasks', JSON.stringify(tasks));
   }, [tasks]);
 
-  // Add Task
   const addTask = (taskText) => {
     const newTask = {
-      id: tasks.length > 0 ? tasks[tasks.length - 1].id + 1 : 1, // Ensure unique IDs
+      id: tasks.length > 0 ? tasks[tasks.length - 1].id + 1 : 1,
       text: taskText,
       completed: false,
     };
     setTasks([...tasks, newTask]);
   };
 
-  // Edit Task
   const editTask = (taskId, newText) => {
     setTasks(
       tasks.map(task =>
@@ -61,12 +61,10 @@ const Todo = () => {
     );
   };
 
-  // Delete Task
   const deleteTask = (taskId) => {
     setTasks(tasks.filter(task => task.id !== taskId));
   };
 
-  // Toggle Complete Task
   const toggleCompleteTask = (taskId) => {
     setTasks(
       tasks.map(task =>
@@ -75,7 +73,6 @@ const Todo = () => {
     );
   };
 
-  // Filter tasks based on search query
   const filteredTasks = tasks.filter(task => {
     const query = searchQuery.toLowerCase();
     return (

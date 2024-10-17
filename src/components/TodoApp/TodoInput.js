@@ -6,6 +6,7 @@ const InputContainer = styled.div`
   align-items: center;
   width: 100%;
   max-width: 300px;
+  margin-bottom: 10px; 
 `;
 
 const InputField = styled.input`
@@ -48,7 +49,7 @@ const TodoInput = ({ addTask }) => {
     <InputContainer>
       <InputField 
         type="text" 
-        placeholder="Add a new task" 
+        placeholder="Add new  task" 
         value={taskText}
         onChange={(e) => setTaskText(e.target.value)}
       />

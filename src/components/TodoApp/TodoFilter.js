@@ -8,6 +8,11 @@ const FilterContainer = styled.div`
   position: relative;
   width: 100%;
   max-width: 300px;
+  margin: 0 auto; 
+  
+  @media (max-width: 768px) {
+    max-width: 90%; 
+  }
 `;
 
 const InputField = styled.input`
@@ -16,6 +21,13 @@ const InputField = styled.input`
   border-radius: 5px;
   border: 1px solid #ccc;
   width: 100%;
+  margin-left: 10px;
+
+
+  @media (max-width: 768px) {
+    padding: 8px 30px 8px 10px; 
+    font-size: 0.9rem; 
+  }
 `;
 
 const SearchIcon = styled(FaSearch)`
@@ -23,6 +35,11 @@ const SearchIcon = styled(FaSearch)`
   right: 10px;
   color: #888;
   font-size: 1.2rem;
+
+  @media (max-width: 768px) {
+    font-size: 1rem; /* Smaller icon on mobile */
+    right: 5px; /* Adjust position */
+  }
 `;
 
 const TodoFilter = ({ setSearchQuery }) => {
