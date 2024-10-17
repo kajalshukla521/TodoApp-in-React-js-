@@ -1,4 +1,4 @@
-// src/components/TodoApp/Todo.js
+
 import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
 import TodoInput from "./TodoInput";

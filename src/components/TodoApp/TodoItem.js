@@ -24,7 +24,7 @@ const ActionButtons = styled.div`
   gap: 10px;
 `;
 
-const TodoItem = ({ task, toggleCompleteTask, deleteTask, cancelTask, editTask }) => {
+const TodoItem = ({ task, toggleCompleteTask, deleteTask,  editTask }) => {
   const [isEditing, setIsEditing] = useState(false);
   const [newText, setNewText] = useState(task.text);
 
@@ -56,7 +56,6 @@ const TodoItem = ({ task, toggleCompleteTask, deleteTask, cancelTask, editTask }
           <>
             <FaEdit onClick={handleEdit} style={{ cursor: 'pointer', color: 'blue' }} />
             <FaCheck onClick={() => toggleCompleteTask(task.id)} style={{ cursor: 'pointer', color: 'green' }} />
-            
             <FaTrash onClick={() => deleteTask(task.id)} style={{ cursor: 'pointer', color: 'red' }} />
           </>
         )}
